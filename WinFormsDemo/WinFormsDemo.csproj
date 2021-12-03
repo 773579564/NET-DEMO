@@ -4,6 +4,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Database\DBAccess\DBAccess.csproj" />
+    <ProjectReference Include="..\Database\DBSqlite\DBSqlite.csproj" />
+    <ProjectReference Include="..\MyHttp\MyHelper.csproj" />
+  </ItemGroup>
 
 </Project>
