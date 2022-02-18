@@ -22,13 +22,12 @@ namespace WinFormsDemo
             this.Invoke(
                 new MethodInvoker(delegate
                 {
-                    text执行过程.Text += strText + System.Environment.NewLine;
-                    text执行过程.Select(text执行过程.Text.Length, 0); //将光标移动到文档结尾处
+                    text执行过程.AppendText(strText + System.Environment.NewLine);
+                    text执行过程.Select(text执行过程.TextLength, 0); //将光标移动到文档结尾处
                     text执行过程.ScrollToCaret(); //将文本框滚动到光标的位置
                     text执行过程.Refresh();
                 }
             ));
-            System.Threading.Thread.Sleep(20);
         }
 
         /// <summary>
